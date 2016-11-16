@@ -17,16 +17,18 @@
            sync-c="true"
            sync-j="1" />
 
-  <project path="build" name="TMartinPPC/maru_platform_build" groups="pdk,tradefed" remote="origin" revision="refs/tags/v0.3" >
+  <project path="build" name="maruos/maru_platform_build" groups="pdk,tradefed" remote="github" revision="refs/tags/v0.3" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="vendor/maruos" name="TMartinPPC/vendor_maru" remote="origin" />
+  <project path="vendor/maruos" name="TMartinPPC/vendor_maruos" remote="origin" />
   <project path="vendor/maruos/mflinger" name="maruos/mflinger" remote="github" />
   <project path="vendor/maruos/blueprints" name="maruos/blueprints" remote="github" />
   <project path="vendor/maruos/installer" name="maruos/installer" remote="github" />
   <project path="vendor/maruos/kernel/msm" name="maruos/android_kernel_msm" remote="github" revision="refs/tags/hammerhead-v0.3" clone-depth="1"/>
-  <project path="vendor/maruos/kernel/flo" name="TMartinPPC/maru_kernel_flo" remote="origin" clone-depth="1"/>
+  <project path="vendor/maruos/kernel/h815" name="TMartinPPC/h815_kernel" remote="origin" revision="aosp" clone-depth="1"/>
+  <project path="vendor/aosp" name="cile381/vendor_aosp" remote="origin" revision="mm6.0" clone-depth="1"/>
+  <project path="vendor/lge" name="TheMuppets/proprietary_vendor_lge" remote="origin" revision="cm-13.0" clone-depth="1"/>
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
@@ -40,13 +42,12 @@
   <project path="developers/samples/android" name="platform/developers/samples/android" />
   <project path="development" name="platform/development" groups="pdk-cw-fs,pdk-fs" />
   <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
-  <project path="device/asus/flo" name="TMartinPPC/maru_device_asus_flo" remote="origin" groups="device,flo" />
-  <project path="device/asus/flo-kernel" name="TMartinPPC/maru_device_asus_flo-kernel" remote="origin" groups="device,flo" clone-depth="1" />
   <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu,broadcom_pdk" />
   <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu,broadcom_pdk" clone-depth="1" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk-fs" />
   <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead" />
   <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" />
+  <project path="device/lge/h815" name="TMartinPPC/android_device_h815" remote="origin" revision="mm6.0" groups="device,h815" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" />
